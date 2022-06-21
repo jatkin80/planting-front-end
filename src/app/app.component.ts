@@ -16,8 +16,8 @@ export class AppComponent implements OnInit {
 constructor(private plantService: PlantService) {}
 
 ngOnInit() {
-this.plantService.fetchPlants().subscribe(plants=>{
-  this.plants=plants
+this.plantService.fetchPlants().subscribe(response=>{
+  this.plants=response.plants
 })
 }
 }
