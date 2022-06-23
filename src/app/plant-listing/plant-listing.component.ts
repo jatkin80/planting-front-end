@@ -9,4 +9,5 @@ export class PlantListingComponent  {
 @Input()  name!: string;
 @Input()  description!: string;
 @Input()  imageUrl!:string;
+@Input() dateAdded!:string;
 }
