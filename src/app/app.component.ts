@@ -21,14 +21,10 @@ this.plantService.fetchPlants().subscribe(response=>{
 })
 }
 
-addPlant(newPlant: Plant){
-  this.plantService.addPlant(newPlant).subscribe (response => {
-    this.plants=[response.plant, ...this.plants ]
-  console.log (newPlant);
-})
+
 }
 
 // dateConverter(date:string) {
 // return `${date.slice(5,7)}/${date.slice(8,10)}/${date.slice(0,4)}`
 // }
-}
+

@@ -1,39 +1,8 @@
 <header>
-  <h1>Planting Peace</h1>
+  <app-nav-bar></app-nav-bar>
 </header>
 
-<main>
-  <h2>
-    Plants
-  </h2>
-
- <form #newPlantForm="ngForm" class="new-plant-form"
-  (ngSubmit)="addPlant(newPlantForm.value)">
-
-  <label for="name">Name</label>
-    <input type="text" name="name" id="name" ngModel />
-  <label for="imageUrl">Image</label>
-    <input type="url" name="imageUrl" id="imageUrl" ngModel/>
-
-  <label for="description">Description</label>
-    <textarea name="description" id="description" ngModel>
-    </textarea>
-<label for="dateAdded">Date Planted</label>
-<input type="text" name="dateAdded" id="dateAdded" ngModel
-/>
-
-  <input type="submit" id="submit" value="Add Plant"/>
-</form>
+<router-outlet></router-outlet>
 
 
-  <ul>
-    <li *ngFor="let plant of plants">
-      <app-plant-listing
-      [name]="plant.name"
-     [description]="plant.description"
-     [imageUrl]="plant.imageUrl"
-     [dateAdded]="plant.dateAdded"
-     ></app-plant-listing>
-    </li>
-  </ul>
-</main>
+

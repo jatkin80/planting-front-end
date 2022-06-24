@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   plantsEndpoint:"http://localhost:8080/plants",
   baseApiUrl: "http://localhost:8080",
+  weatherApiUrl:"https://api.openweathermap.org/data/2.5/weather?zip=77406&appid=cafab08b41482e6535a2574a24e44ce3&units=imperial"
 
 };
 

@@ -1,0 +1,18 @@
+<body>
+  <header>
+<img src="https://i.postimg.cc/NjqGcvn8/Planting-Peace3.jpg">
+<div id="weather">
+  <app-weather-widget></app-weather-widget>
+  </div>
+  </header>
+    <ul>
+    <li *ngFor="let plant of plants">
+      <app-plant-listing
+      [name]="plant.name"
+     [description]="plant.description"
+     [imageUrl]="plant.imageUrl"
+     [dateAdded]="plant.dateAdded"
+     ></app-plant-listing>
+    </li>
+  </ul>
+<main>
