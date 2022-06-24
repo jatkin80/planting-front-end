@@ -7,6 +7,10 @@ type PlantsResponse= {
 plants:Plant[];
 }
 
+type PlantResponse= {
+plant:Plant;
+}
+
 const plantsEndpoint=`${environment.baseApiUrl}/plants`
 @Injectable({
   providedIn: 'root'
@@ -17,5 +21,9 @@ export class PlantService {
     constructor(private http: HttpClient){}
 fetchPlants() {
 return this.http.get<PlantsResponse>(plantsEndpoint)
+}
+
+addPlant(plant: Plant) {
+  return this.http.post<PlantResponse>(plantsEndpoint, plant)
 }
 }
